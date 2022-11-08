@@ -55,10 +55,10 @@ svg{
 	width: 15px;
 	height: 15px;
 }
-img.svg{
+/* img.svg{
 	width: 15px;
 	height: 15px;
-}
+} */
 .svg.custom{
 	fill: none;
 }
@@ -433,7 +433,7 @@ body.opened .edina_tm_sidebar{
 }
 .edina_tm_sidebar .menu ul li{
 	margin: 0px 0px 8px 0px;
-	width: 100%;
+	/* width: 100%; */
 	float: left;
 }
 .edina_tm_sidebar .menu ul li:last-child{
@@ -472,6 +472,26 @@ body.opened .edina_tm_sidebar{
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
+
+.edina_tm_sidebar .menu .maps {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu-item {
+	margin-bottom: 25px;
+	text-align: center;
+
+}
+
+.edina_tm_sidebar .menu .maps .icon {
+	/* margin: auto; */
+}
+
+.svg {
+	height: 50px;
+}
+
 .edina_tm_sidebar .menu ul li a:hover:before{
 	width: 100%;
 }
