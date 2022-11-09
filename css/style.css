@@ -35,10 +35,7 @@ svg{
 	width: 15px;
 	height: 15px;
 }
-/* img.svg{
-	width: 15px;
-	height: 15px;
-} */
+
 .svg.custom{
 	fill: none;
 }
@@ -240,10 +237,6 @@ h6 { font-size: 16px; }
 	        transition: all .3s ease;
 }
 
-/*---------------------------------------------------*/
-/*	03) EDINA SIDEBAR
-/*---------------------------------------------------*/
-
 .sidebar{
 	width: 320px;
 	height: 100vh;
@@ -437,16 +430,12 @@ a:hover {
 	        transition: all .5s ease;
 }
 body.opened .mainpart{
-	padding-left: 320px;
+	padding-left: 0px !important;
 }
 
 @-webkit-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
 @-moz-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
 @keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
-
-/*---------------------------------------------------*/
-/*	06) EDINA SERVICE
-/*---------------------------------------------------*/
 
 .title{
 	width: 100%;
