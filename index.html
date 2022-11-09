@@ -19,1796 +19,1834 @@
 	<link rel="stylesheet" type="text/css" href="css/dark.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	
-	<!-- <link rel="stylesheet/less" type="text/css" href="scss/styles.less" />
-		<script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script> -->
+	<style>
 		
-		<style>
-			html {
-				overflow-x: hidden;
-				padding: 0px;
-				margin: 0px
-			}
-
-			svg{
-				fill: currentcolor;
-				width: 15px;
-				height: 15px;
-			}
-			
-			.svg.custom{
-				fill: none;
-			}
-			::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-				color: #7e7e7e;
-			}
-			:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-				color: #7e7e7e;
-				opacity:  1;
-			}
-			::-moz-placeholder { /* Mozilla Firefox 19+ */
-				color: #7e7e7e;
-				opacity:  1;
-			}
-			:-ms-input-placeholder { /* Internet Explorer 10-11 */
-				color: #7e7e7e;
-			}
-			::-ms-input-placeholder { /* Microsoft Edge */
-				color: #7e7e7e;
-			}
-			
-			::placeholder { /* Most modern browsers support this now. */
-				color: #7e7e7e;
-			}
-			
-			.container{
-				max-width: 1500px;
-				width:100%;
-				margin-left: auto;
-				margin-right: auto;
-				height:auto;
-				padding:0px 40px;
-				position:relative;
-				clear:both;
-			}
-			
-			h1, h2, h3, h4, h5, h6{
-				font-weight:600;
-				line-height: 1.5;
-				font-family: "poppins";
-				color: #1A1A1A;
-			}
-			
-			h1 { font-size: 45px; }
-			h2 { font-size: 36px; }
-			h3 { font-size: 30px; }
-			h4 { font-size: 24px; }
-			h5 { font-size: 20px; }
-			h6 { font-size: 16px; }
-			
-			.all_wrap{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				position: relative;
-			}
-			.all_wrap,
-			.all_wrap *{
-				-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-				-moz-box-sizing: border-box; /* Firefox, other Gecko */
-				box-sizing: border-box; /* Opera/IE 8+ */
-			}
-			
-			#preloader{
-				position: fixed;
-				left: 0;
-				top: 0;
-				height: 100vh;
-				width: 100%;
-				z-index: 99999;
-				display: flex;
-			}
-			#preloader:before,
-			#preloader:after{
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 50%;
-				height: 100%;
-				z-index: -1;
-				background-color: #000;
-				-webkit-transition: all 0.3s ease 0s;
-				-o-transition: all 0.3s ease 0s;
-				transition: all 0.3s ease 0s;
-			}
-			#preloader:after{
-				left: auto;
-				right: 0;
-			}
-			#preloader .loader_line{
-				margin: auto;
-				width: 1px;
-				height: 250px;
-				position: relative;
-				overflow: hidden;
-				-webkit-transition: all 0.8s ease 0s;
-				-o-transition: all 0.8s ease 0s;
-				transition: all 0.8s ease 0s;
-			}
-			.loader_line:before{
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 50%;
-				width: 1px;
+		html {
+			overflow-x: hidden;
+			padding: 0px;
+			margin: 0px
+		}
+		body{
+			font-family: "Poppins";
+			font-size: 18px;
+			line-height: 30px;
+			letter-spacing: 0px;
+			word-wrap: break-word;
+			font-weight: 400;
+			background-color: #fff;
+			color: #7e7e7e;
+		}
+		body::-webkit-scrollbar {
+			width: 11px;
+		}
+		body{
+			scrollbar-width: thin;
+			scrollbar-color: #999 #fff;
+		}
+		body:-webkit-scrollbar-track {
+			background: #fff;
+		}
+		body::-webkit-scrollbar-thumb {
+			background-color: #999;
+			border-radius: 6px;
+			border: 3px solid #fff;
+		}
+		svg{
+			fill: currentcolor;
+			width: 15px;
+			height: 15px;
+		}
+		
+		.svg.custom{
+			fill: none;
+		}
+		::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+			color: #7e7e7e;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			color: #7e7e7e;
+			opacity:  1;
+		}
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+			color: #7e7e7e;
+			opacity:  1;
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			color: #7e7e7e;
+		}
+		::-ms-input-placeholder { /* Microsoft Edge */
+			color: #7e7e7e;
+		}
+		
+		::placeholder { /* Most modern browsers support this now. */
+			color: #7e7e7e;
+		}
+		
+		.container{
+			max-width: 1500px;
+			width:100%;
+			margin-left: auto;
+			margin-right: auto;
+			height:auto;
+			padding:0px 40px;
+			position:relative;
+			clear:both;
+		}
+		
+		h1, h2, h3, h4, h5, h6{
+			font-weight:600;
+			line-height: 1.5;
+			font-family: "poppins";
+			color: #1A1A1A;
+		}
+		
+		h1 { font-size: 45px; }
+		h2 { font-size: 36px; }
+		h3 { font-size: 30px; }
+		h4 { font-size: 24px; }
+		h5 { font-size: 20px; }
+		h6 { font-size: 16px; }
+		
+		.all_wrap{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			position: relative;
+		}
+		.all_wrap,
+		.all_wrap *{
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+		}
+		
+		#preloader{
+			position: fixed;
+			left: 0;
+			top: 0;
+			height: 100vh;
+			width: 100%;
+			z-index: 99999;
+			display: flex;
+		}
+		#preloader:before,
+		#preloader:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 50%;
+			height: 100%;
+			z-index: -1;
+			background-color: #000;
+			-webkit-transition: all 0.3s ease 0s;
+			-o-transition: all 0.3s ease 0s;
+			transition: all 0.3s ease 0s;
+		}
+		#preloader:after{
+			left: auto;
+			right: 0;
+		}
+		#preloader .loader_line{
+			margin: auto;
+			width: 1px;
+			height: 250px;
+			position: relative;
+			overflow: hidden;
+			-webkit-transition: all 0.8s ease 0s;
+			-o-transition: all 0.8s ease 0s;
+			transition: all 0.8s ease 0s;
+		}
+		.loader_line:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 1px;
+			height: 0%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+			background-color: #fff;
+			-webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
+			-o-animation: lineheight 1000ms ease-in-out 0s forwards;
+			animation: lineheight 1000ms ease-in-out 0s forwards;
+		}
+		.loader_line:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1px;
+			height: 100%;
+			background-color: #999999;
+			-webkit-transform: translateY(-100%);
+			-ms-transform: translateY(-100%);
+			-o-transform: translateY(-100%);
+			transform: translateY(-100%);
+			-webkit-animation: lineround 1200ms linear 0s infinite;
+			-o-animation: lineround 1200ms linear 0s infinite;
+			animation: lineround 1200ms linear 0s infinite;
+			animation-delay: 2000ms;
+		}
+		@keyframes lineheight{
+			0%{
 				height: 0%;
-				-webkit-transform: translateY(-50%);
-				-ms-transform: translateY(-50%);
-				-o-transform: translateY(-50%);
-				transform: translateY(-50%);
-				background-color: #fff;
-				-webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
-				-o-animation: lineheight 1000ms ease-in-out 0s forwards;
-				animation: lineheight 1000ms ease-in-out 0s forwards;
 			}
-			.loader_line:after{
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 1px;
+			100%{
 				height: 100%;
-				background-color: #999999;
+			}
+		}
+		
+		@keyframes lineround{
+			0%{
 				-webkit-transform: translateY(-100%);
 				-ms-transform: translateY(-100%);
 				-o-transform: translateY(-100%);
 				transform: translateY(-100%);
-				-webkit-animation: lineround 1200ms linear 0s infinite;
-				-o-animation: lineround 1200ms linear 0s infinite;
-				animation: lineround 1200ms linear 0s infinite;
-				animation-delay: 2000ms;
 			}
-			@keyframes lineheight{
-				0%{
-					height: 0%;
-				}
-				100%{
-					height: 100%;
-				}
-			}
-			
-			@keyframes lineround{
-				0%{
-					-webkit-transform: translateY(-100%);
-					-ms-transform: translateY(-100%);
-					-o-transform: translateY(-100%);
-					transform: translateY(-100%);
-				}
-				100%{
-					-webkit-transform: translateY(200%);
-					-ms-transform: translateY(200%);
-					-o-transform: translateY(200%);
-					transform: translateY(200%);
-				}
-			}
-			
-			/*hiding all*/
-			.preloaded .loader_line:after{
-				opacity: 0;
-			}
-			.preloaded  .loader_line{
-				opacity: 0;
-				height: 100%!important;
-			}
-			.preloaded:before,
-			.preloaded:after{
-				-webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
-				-o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
-				animation: preloadedzero 300ms ease-in-out 500ms forwards;
-			}
-			@keyframes preloadedzero{
-				0%{
-					width: 50%;
-				}
-				100%{
-					width: 0%;
-				}
-			}
-			
-			.my_trigger .hamburger-box{
-				display: block;
-			}
-			.my_trigger .hamburger{
-				padding: 0px;
-			}
-			.my_trigger .hamburger .hamburger-inner::before,
-			.my_trigger .hamburger .hamburger-inner::after,
-			.my_trigger .hamburger .hamburger-inner{
-				background-color: #000;
-				width: 30px;
-				height: 2px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.sidebar .logo{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				border-bottom: 1px solid #CBD3D9;
-				padding: 40px;
-			}
-			.sidebar .menu{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				padding: 60px 40px;
-			}
-			.sidebar .menu ul{
-				margin: 0px;
-				list-style-type: none;
-			}
-			.sidebar .menu ul li{
-				margin: 0px 0px 8px 0px;
-				/* width: 100%; */
-				float: left;
-			}
-			.sidebar .menu ul li:last-child{
-				margin-bottom: 0px;
-			}
-			.sidebar .menu ul li a{
-				text-decoration: none;
-				color: #1A1A1A;
-				font-size: 14px;
-				font-weight: 500;
-				display: block;
-				border-radius: 6px;
-				padding: 9px 15px;
-				position: relative;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.sidebar .menu ul li a:before{
-				position: absolute;
-				content: "";
-				width:0;
-				height: 100%;
-				top: 0px;
-				left: 0px;
-				background-color: #F9F9FC;
-				border-radius: 6px;
-				z-index: -1;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			
-			.sidebar .menu .maps {
-				display: flex;
-				justify-content: space-between;
-			}
-			
-			.menu-item {
-				margin-bottom: 25px;
-				text-align: center;
-				
-			}
-			
-			a {
-				font-family: "Poppins";
-				text-decoration: none;
-				color: #141115;
-			}
-			
-			a:hover {
-				color: #FAC748;
-			}
-			
-			.svg {
-				height: 50px;
-				color: black;
-			}
-			
-			.sidebar .menu ul li a:hover:before{
-				width: 100%;
-			}
-			.sidebar .menu ul li .list_inner.current a:before{
-				width: 100%;
-			}
-			.sidebar .menu ul li .svg{
-				width: 19px;
-				height: 19px;
-				position: relative;
-				top: 3px;
-				margin-right: 15px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.sidebar .author{
-				position: absolute;
-				bottom: 0px;
-				left: 0px;
-				right: 0px;
-				border-top: 1px solid #CBD3D9;
-			}
-			.sidebar .author .inner{
-				width: 100%;
-				height: auto;
-				display: flex;
-				align-items: center;
-				padding: 40px 55px;
-			}
-			.sidebar .author .image{
-				position: relative;
-				width: 50px;
-				height: 50px;
-				border-radius: 100%;
-				display: inline-block;
-			}
-			.sidebar .author .main{
-				position: absolute;
-				top: 0px;
-				bottom: 0px;
-				left: 0px;
-				right: 0px;
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
-				border-radius: 100%;
-			}
-			.sidebar .short{
-				padding-left: 13px;
-			}
-			.sidebar .short h3{
-				font-size: 16px;
-				font-weight: 500;
-				line-height: 1.2;
-			}
-			.sidebar .short a{
-				text-decoration: none;
-				color: #7E7E7E;
-				font-size: 14px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			
-			
-			
-			.mainpart{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				padding-left: 0px;
-				
-				-webkit-transition: all .5s ease;
-				-moz-transition: all .5s ease;
-				-ms-transition: all .5s ease;
-				-o-transition: all .5s ease;
-				transition: all .5s ease;
-			}
-			body.opened .mainpart{
-				padding-left: 0px;
-			}
-			
-			@-webkit-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
-			@-moz-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
-			@keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
-			
-			.title{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-			}
-			.title h3{
-				font-size: 60px;
-				font-weight: 800;
-				margin-bottom: 20px;
-			}
-			
-			.results{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				background-color: #F9F9FC;
-				padding: 20px 0px 20px 0px;
-			}
-			
-			.results p {
-				margin-bottom: 20px;
-			}
-			
-			.results .service_list{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				padding-top: 25px;
-			}
-			
-			.results .info p {
-				font-weight: 600;
-			}
-			
-			.results .service_list .container{
-				display: flex;
-				/* flex-wrap: wrap; */
-			}
-			
-			.buttons {
-				display: flex;
-				justify-content: center;
-			}
-			
-			button {
-				background-color: #FAC748;
-				border: #141115;
-				color: #141115;
-				padding: 5px 8px;
-				text-align: center;
-				display: inline-block;
-				font-size: 20px;
-				font-family: "Poppins";
-				font-weight: 600;
-				margin-right: 15px;
-				border-radius: 8px;
-			}
-			
-			button:hover {
-				background-color: #141115;
-				border: #FAC748;
-				color: #FAC748;
-			}
-			
-			.results .service_list .container .map {
-				width: 66%;
-			}
-			
-			.results .service_list .container .child {
-				margin-right: 15px;
-			}
-			
-			.results .service_list .container .info {
-				display: flex;
-				flex-direction: column;
-			}
-			
-			.results ul{
-				margin: 0px 0px 0px -30px;
-				list-style-type: none;
-				display: flex;
-				flex-wrap: wrap;
-			}
-			.results ul li{
-				margin: 0px 0px 30px 0px;
-				width:25%;
-				padding-left: 30px;
-				float: left;
-			}
-			.results ul li .list_inner{
-				width: 100%;
-				height: 100%;
-				clear: both;
-				float: left;
-				position: relative;
-				background-color: #fff;
-				padding: 50px 100px 45px 50px;
-				border-radius: 6px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.results ul li .list_inner:hover{
-				background-color: #000;
-			}
-			.results ul li .svg{
-				width: 50px;
-				height: 50px;
-				margin-bottom: 25px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.results ul li .list_inner:hover .svg{
-				color: #fff;
-			}
-			.results ul li .list_inner:hover .svg.custom{
-				stroke: #fff;
-			}
-			.results ul li h3{
-				font-weight: 600;
-				font-size: 26px;
-				color: #1A1A1A;
-				margin-bottom: 20px;
-			}
-			.results ul li .list_inner:hover h3{
-				color: #fff;
-			}
-			.results ul li .learn_more{
-				text-decoration: none;
-				color: #7E7E7E;
-				font-size: 18px;
-				display: inline-block;
-				position: relative;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.results ul li .learn_more span{
-				position: absolute;
-				display: inline-block;
-				width: 10px;
-				height: 2px;
-				background-color: #7E7E7E;
-				top: 50%;
-				transform: translateY(-50%);
-				margin-left: 14px;
-				border-radius: 50px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.results ul li .learn_more span:before{
-				position: absolute;
-				content: "";
-				width: 6px;
-				height: 2px;
-				background-color: #7E7E7E;
-				transform: rotate(45deg);
-				right: 0px;
-				top: -2px;
-				border-radius: 50px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.results ul li .learn_more span:after{
-				position: absolute;
-				content: "";
-				width: 6px;
-				height: 2px;
-				background-color: #7E7E7E;
-				transform: rotate(-45deg);
-				right: 0px;
-				bottom: -2px;
-				border-radius: 50px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.results ul li .list_inner:hover .learn_more span{
-				width: 30px;
-				background-color: #fff;
-			}
-			.results ul li .list_inner:hover .learn_more span:before,
-			.results ul li .list_inner:hover .learn_more span:after{
-				background-color : #fff;
-			}
-			.results ul li .list_inner:hover .learn_more{
-				color : #fff;
-			}
-			.full_link{
-				position: absolute;
-				top: 0px;
-				bottom: 0px;
-				left: 0px;
-				right: 0px;
-				z-index: 5;
-			}
-			.results .popup_informations{
-				opacity: 0;
-				visibility: hidden;
-				position: absolute;
-				z-index: -11;
-				display: none;
-			}
-			
-			.my_carousel{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				position: relative;
-			}
-			.my_carousel ul{
-				margin: 0px;
-				list-style-type: none;
-			}
-			.my_carousel ul li{
-				margin: 0px;
-			}
-			.my_carousel ul li .list_inner{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				position: relative;
-			}
-			.my_carousel ul li .image{
-				position: relative;
-				overflow: hidden;
-				border-radius: 10px;
-			}
-			.my_carousel ul li .image img{
-				position: relative;
-				opacity: 0;
-				min-width: 100%;
-			}
-			.my_carousel ul li .image .main{
-				position: absolute;
-				top: 0px;
-				bottom: 0px;
-				left: 0px;
-				right: 0px;
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
-				border-radius: 10px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.my_carousel ul li .list_inner:hover .image .main{
-				transform: scale(1.1) translateZ(0);
-			}
-			.my_carousel ul .details{
-				width: 100%;
-				float: left;
-				padding-top: 10px;
-			}
-			.my_carousel ul .details h3 a{
-				text-decoration: none;
-				color: #1A1A1A;
-				font-size: 22px;
-				font-weight: 700;
-			}
-			.my_carousel ul .details span a{
-				text-decoration: none;
-				color: #7E7E7E;
-				font-size: 16px;
-				font-weight: 400;
-			}
-			.my_carousel .prev_button,
-			.my_carousel .next_button{
-				position: absolute;
-				display: block;
-				width: 80px;
-				height: 80px;
-				border-radius: 100%;
-				border: 2px solid #7E7E7E;
-				top: 50%;
-				transform: translateY(-50%);
-				margin-top: -43px;
-				z-index: 6;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.my_carousel .prev_button:hover,
-			.my_carousel .next_button:hover{
-				border-color: rgba(255,255,255,.2);
-				background-color: #000;
-			}
-			.my_carousel .prev_button{
-				left: -33px;
-			}
-			.my_carousel .next_button{
-				right: -33px;
-			}
-			.my_carousel .prev_button span,
-			.my_carousel .next_button span{
-				position: absolute;
-				width: 35px;
-				height: 2px;
-				background-color: #7E7E7E;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%,-50%);
-				border-radius: 50px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.my_carousel .prev_button:hover span,
-			.my_carousel .next_button:hover span{
-				background-color: #fff;
-			}
-			.my_carousel .prev_button span:before{
-				position: absolute;
-				content: "";
-				width: 22px;
-				height: 2px;
-				background-color: #7E7E7E;
-				left: -2px;
-				top: -8px;
-				transform: rotate(-45deg);
-				border-radius: 50px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.my_carousel .prev_button span:after{
-				position: absolute;
-				content: "";
-				width: 22px;
-				height: 2px;
-				background-color: #7E7E7E;
-				left: -2px;
-				bottom: -8px;
-				transform: rotate(45deg);
-				border-radius: 50px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.my_carousel .next_button span:before{
-				position: absolute;
-				content: "";
-				width: 22px;
-				height: 2px;
-				background-color: #7E7E7E;
-				right: -2px;
-				top: -8px;
-				transform: rotate(45deg);
-				border-radius: 50px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.my_carousel .next_button span:after{
-				position: absolute;
-				content: "";
-				width: 22px;
-				height: 2px;
-				background-color: #7E7E7E;
-				right: -2px;
-				bottom: -8px;
-				transform: rotate(-45deg);
-				border-radius: 50px;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.my_carousel .prev_button:hover span:before,
-			.my_carousel .prev_button:hover span:after,
-			.my_carousel .next_button:hover span:before,
-			.my_carousel .next_button:hover span:after{
-				background-color: #fff;
-			}
-			
-			.related{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				padding: 20px 0px;
-			}
-			.related .news_inner{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				padding-top: 60px;
-			}
-			.related ul li .news_details{
-				width: 100%;
-				float: left;
-				padding-top: 9px;
-			}
-			.related ul li .news_details span{
-				font-size: 16px;
-				display: inline-block;
-			}
-			.related ul li .news_details span a{
-				text-decoration: none;
-				color: #7E7E7E;
-				position: relative;
-				display: inline-block;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.related ul li .news_details span a:before{
-				position: relative;
-				content: ".";
-				font-size: 40px;
-				top: -3px;
-				color: #7e7e7e;
-				padding: 0px 5px;
-			}
-			.related ul li .news_details .title{
-				line-height: 1.2;
-			}
-			.related ul li .news_details .title a{
-				text-decoration: none;
-				color: #34495E;
-				font-size: 22px;
-				font-weight: 700;
-				
-				-webkit-transition: all .3s ease;
-				-moz-transition: all .3s ease;
-				-ms-transition: all .3s ease;
-				-o-transition: all .3s ease;
-				transition: all .3s ease;
-			}
-			.related .main_content{
-				opacity: 0;
-				visibility: hidden;
-				position: absolute;
-				z-index: -11;
-				display: none;
-			}
-			body.modal{
-				overflow-y: hidden;
-			}
-			
-			.footer{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				background-color: #F9F9FC;
-				padding: 20px 0px;
-			}
-			.footer .extra_info{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				/* padding-top: 60px; */
-				/* margin-bottom: 30px; */
-			}
-			
-			.social-links {
-				margin-bottom: 25px;
-				display: flex;
-				width: 10%;
-				justify-content: space-between;
-			}
-			
-			.social-links a {
-				color: #FAC748 !important;
-			}
-			
-			.footer .extra_info .wrapper{
-				margin: 0px 0px 0px -30px;
-				list-style-type: none;
-			}
-			
-			.footer .extra_info .wrapper p {
-				font-size: 12px;
-			}
-			
-			.footer .extra_info .wrapper > li{
-				margin: 0px 0px 30px 0px;
-				float: left;
+			100%{
+				-webkit-transform: translateY(200%);
+				-ms-transform: translateY(200%);
+				-o-transform: translateY(200%);
+				transform: translateY(200%);
+			}
+		}
+		
+		/*hiding all*/
+		.preloaded .loader_line:after{
+			opacity: 0;
+		}
+		.preloaded  .loader_line{
+			opacity: 0;
+			height: 100%!important;
+		}
+		.preloaded:before,
+		.preloaded:after{
+			-webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+			-o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+			animation: preloadedzero 300ms ease-in-out 500ms forwards;
+		}
+		@keyframes preloadedzero{
+			0%{
 				width: 50%;
-				padding-left: 30px;
 			}
-			.footer .extra_info .wrapper > li .list_inner{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-				position: relative;
-				background-color: #fff;
-				padding: 33px 35px 41px 35px;
+			100%{
+				width: 0%;
 			}
-			.footer .extra_info .in{
-				margin: 0px;
-				list-style-type: none;
-			}
-			.footer .extra_info .in li{
-				margin: 0px 0px 8px 0px;
-				width: 100%;
-				float: left;
-			}
-			.footer .extra_info .in li :last-child{
-				margin-bottom: 0px;
-			}
-			.footer .extra_info h3{
-				font-size: 20px;
-				font-weight: 500;
-				margin-bottom: 10px;
-			}
-			.footer .extra_info a{
-				text-decoration: none;
-				color: #7E7E7E;
-			}
-			.footer .mainpart{
-				width: 100%;
-				height: auto;
-				clear: both;
-				display: flex;
-			}
-			.footer .mainpart .left{
-				width: 50%;
-				background-color: #fff;
-				padding: 55px 45px 60px 45px;
-				margin-right: 30px;
-			}
-			.footer .mainpart .left .title{
-				width: 100%;
-				float: left;
-				margin-bottom: 14px;
-			}
-			.footer .mainpart .left .title p{
-				font-size: 25px;
-				line-height: 2;
-			}
-			.footer .mainpart .left .title span{
-				font-weight: 600;
-				color: #1A1A1A;
-			}
-			.footer .fields{
-				width: 100%;
-				height: auto;
-				clear: both;
-				float: left;
-			}
-			.footer .first_row{
-				width: 100%;
-				margin-bottom: 60px;
-			}
-			.footer .second{
-				width: 100%;
-				margin-bottom: 60px;
-			}
-			.footer .third{
-				width: 100%;
-				margin-bottom: 30px;
-			}
-			.footer input{
-				width: 100%;
-				height: 50px;
-				border: none;
-				border-bottom: 1px solid #CBD3D9;
-				background-color: transparent;
-				font-size: 16px;
-				color: #7E7E7E;
-				font-weight: 500;
-				font-family: "Poppins";
-				padding-left: 0px !important;
-			}
-			.footer input:focus{
-				outline: none;
-				border-bottom-color: #0F172A;
-				background-color: transparent;
-			}
-			.footer textarea{
-				width: 100%;
-				border: none;
-				border-bottom: 1px solid #CBD3D9;
-				background-color: transparent;
-				font-size: 16px;
-				color: #7E7E7E;
-				font-weight: 500;
-				font-family: "Poppins";
-				height: 50px;
-				resize: none;
-				padding-left: 0px !important;
-			}
-			.footer textarea:focus{
-				outline: none;
-				border-bottom-color: #0F172A;
-				background-color: transparent;
-			}
-			.footer .empty_notice{
-				color: #F52225;
-				margin-bottom: 7px;
-				display: none;
-				text-align: left;
-				font-weight: 500;
-			}
-			.footer .contact_error{
-				color: #F52225;
-				text-align: left;
-				font-weight: 500;
-			}
-			.footer .returnmessage{
-				color:#3A00FF;
-				margin-bottom: 7px;
-				text-align: left;
-				font-weight: 500;
-			}
-			.footer .right{
-				width: 50%;
-				margin-left: 30px;
-			}
-			.footer .right .map{
-				min-height: 594px;
-				width: 100%;
-				filter: grayscale(1);
-			}
+		}
+		
+		.my_trigger .hamburger-box{
+			display: block;
+		}
+		.my_trigger .hamburger{
+			padding: 0px;
+		}
+		.my_trigger .hamburger .hamburger-inner::before,
+		.my_trigger .hamburger .hamburger-inner::after,
+		.my_trigger .hamburger .hamburger-inner{
+			background-color: #000;
+			width: 30px;
+			height: 2px;
 			
-			@media (max-width: 1600px) {
-				.container{max-width: 1170px;}
-				.my_carousel .prev_button, .my_carousel .next_button{width: 65px;height: 65px;}
-				.results ul li .list_inner{padding-right: 40px;}
-				.results ul li h3{font-size: 23px;}
-				.footer .mainpart .left .title p{font-size: 20px;}
-				
-				.sidebar .logo{padding: 30px 40px;}
-				.sidebar .menu{padding: 50px 40px;}
-				.sidebar .menu ul li a{padding: 2px 15px;}
-				.sidebar .menu ul li{margin-bottom: 4px;}
-				.sidebar .author .inner{padding: 30px 55px;}
-				.progress_inner .label{margin-bottom: 5px;}
-				.progress_inner{margin-bottom: 20px;}
-			}
-			@media (max-width: 1040px) {
-				.sidebar{display: none;}
-				.mainpart{padding-left: 0px;}
-				body.opened .mainpart{padding-left: 0px;}
-				.results ul li{width: 50%;}
-				.footer .extra_info .wrapper{margin: 0px;}
-				.footer .extra_info .wrapper > li{width: 100%;padding-left: 0px;}
-				.footer .mainpart{flex-direction: column;align-items: baseline;}
-				.footer .mainpart .left{width: 100%;margin-right: 0px;margin-bottom: 50px;}
-				.footer .right{width: 100%;margin-left: 0px;}
-				.container{padding: 0px 30px;}
-				
-			}
-			@media (max-width: 768px) {
-				.title h3{font-size: 45px;}
-				.results ul{margin: 0px;}
-				.results ul li{width: 100%;padding-left: 0px;}
-				.my_carousel .prev_button, .my_carousel .next_button{width: 50px;height: 50px;}
-				.my_carousel .next_button{right: -25px;}
-				.my_carousel .prev_button{left: -25px;}
-				.my_carousel .prev_button span, .my_carousel .next_button span{width: 25px;}
-				.my_carousel .next_button span:before{width: 15px;top: -5px;}
-				.my_carousel .next_button span:after{width: 15px;bottom: -5px;}
-				.my_carousel .prev_button span:before{width: 15px;top: -5px;}
-				.my_carousel .prev_button span:after{width: 15px;bottom: -5px;}
-				.results ul li .list_inner{padding-left: 20px;padding-right: 20px;}
-				.footer .mainpart .left{padding-left: 20px;padding-right: 20px;}
-				.footer .extra_info .wrapper > li .list_inner{padding-left: 20px;padding-right: 20px;}
-			}
-		</style>
-	</head>
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		
+		.sidebar{
+			width: 320px;
+			height: 100vh;
+			position: fixed;
+			top: 0px;
+			left: -320px;
+			background-color: #fff;
+			box-shadow: 3px 0px 5px #f5f5f5;
+			z-index: 3;
+			
+			-webkit-transition: all .5s ease;
+			-moz-transition: all .5s ease;
+			-ms-transition: all .5s ease;
+			-o-transition: all .5s ease;
+			transition: all .5s ease;
+		}
+		body.opened .sidebar{
+			left: 0px;
+		}
+		.sidebar .logo{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			border-bottom: 1px solid #CBD3D9;
+			padding: 40px;
+		}
+		.sidebar .menu{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			padding: 60px 40px;
+		}
+		.sidebar .menu ul{
+			margin: 0px;
+			list-style-type: none;
+		}
+		.sidebar .menu ul li{
+			margin: 0px 0px 8px 0px;
+			/* width: 100%; */
+			float: left;
+		}
+		.sidebar .menu ul li:last-child{
+			margin-bottom: 0px;
+		}
+		.sidebar .menu ul li a{
+			text-decoration: none;
+			color: #1A1A1A;
+			font-size: 14px;
+			font-weight: 500;
+			display: block;
+			border-radius: 6px;
+			padding: 9px 15px;
+			position: relative;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.sidebar .menu ul li a:before{
+			position: absolute;
+			content: "";
+			width:0;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+			background-color: #F9F9FC;
+			border-radius: 6px;
+			z-index: -1;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		
+		.sidebar .menu .maps {
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		.menu-item {
+			margin-bottom: 25px;
+			text-align: center;
+			
+		}
+		
+		a {
+			font-family: "Poppins";
+			text-decoration: none;
+			color: #141115;
+		}
+		
+		a:hover {
+			color: #FAC748;
+		}
+		
+		.svg {
+			height: 50px;
+			color: black;
+		}
+		
+		.sidebar .menu ul li a:hover:before{
+			width: 100%;
+		}
+		.sidebar .menu ul li .list_inner.current a:before{
+			width: 100%;
+		}
+		.sidebar .menu ul li .svg{
+			width: 19px;
+			height: 19px;
+			position: relative;
+			top: 3px;
+			margin-right: 15px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.sidebar .author{
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			border-top: 1px solid #CBD3D9;
+		}
+		.sidebar .author .inner{
+			width: 100%;
+			height: auto;
+			display: flex;
+			align-items: center;
+			padding: 40px 55px;
+		}
+		.sidebar .author .image{
+			position: relative;
+			width: 50px;
+			height: 50px;
+			border-radius: 100%;
+			display: inline-block;
+		}
+		.sidebar .author .main{
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			border-radius: 100%;
+		}
+		.sidebar .short{
+			padding-left: 13px;
+		}
+		.sidebar .short h3{
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+		.sidebar .short a{
+			text-decoration: none;
+			color: #7E7E7E;
+			font-size: 14px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		
+		
+		
+		.mainpart{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			padding-left: 320px;
+			
+			-webkit-transition: all .5s ease;
+			-moz-transition: all .5s ease;
+			-ms-transition: all .5s ease;
+			-o-transition: all .5s ease;
+			transition: all .5s ease;
+		}
+		body.opened .mainpart{
+			padding-left: 320px;
+		}
+		
+		@-webkit-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+		@-moz-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+		@keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+		
+		.title{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+		}
+		.title h3{
+			font-size: 60px;
+			font-weight: 800;
+			margin-bottom: 20px;
+		}
+		
+		.results{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			background-color: #F9F9FC;
+			padding: 20px 0px 20px 0px;
+		}
+		
+		.results p {
+			margin-bottom: 20px;
+		}
+		
+		.results .service_list{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			padding-top: 25px;
+		}
+		
+		.results .info p {
+			font-weight: 600;
+		}
+		
+		.results .service_list .container{
+			display: flex;
+			/* flex-wrap: wrap; */
+		}
+		
+		.buttons {
+			display: flex;
+			justify-content: center;
+		}
+		
+		button {
+			background-color: #FAC748;
+			border: #141115;
+			color: #141115;
+			padding: 5px 8px;
+			text-align: center;
+			display: inline-block;
+			font-size: 20px;
+			font-family: "Poppins";
+			font-weight: 600;
+			margin-right: 15px;
+			border-radius: 8px;
+		}
+		
+		button:hover {
+			background-color: #141115;
+			border: #FAC748;
+			color: #FAC748;
+		}
+		
+		.results .service_list .container .map {
+			width: 66%;
+		}
+		
+		.results .service_list .container .child {
+			margin-right: 15px;
+		}
+		
+		.results .service_list .container .info {
+			display: flex;
+			flex-direction: column;
+		}
+		
+		.results ul{
+			margin: 0px 0px 0px -30px;
+			list-style-type: none;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.results ul li{
+			margin: 0px 0px 30px 0px;
+			width:25%;
+			padding-left: 30px;
+			float: left;
+		}
+		.results ul li .list_inner{
+			width: 100%;
+			height: 100%;
+			clear: both;
+			float: left;
+			position: relative;
+			background-color: #fff;
+			padding: 50px 100px 45px 50px;
+			border-radius: 6px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.results ul li .list_inner:hover{
+			background-color: #000;
+		}
+		.results ul li .svg{
+			width: 50px;
+			height: 50px;
+			margin-bottom: 25px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.results ul li .list_inner:hover .svg{
+			color: #fff;
+		}
+		.results ul li .list_inner:hover .svg.custom{
+			stroke: #fff;
+		}
+		.results ul li h3{
+			font-weight: 600;
+			font-size: 26px;
+			color: #1A1A1A;
+			margin-bottom: 20px;
+		}
+		.results ul li .list_inner:hover h3{
+			color: #fff;
+		}
+		.results ul li .learn_more{
+			text-decoration: none;
+			color: #7E7E7E;
+			font-size: 18px;
+			display: inline-block;
+			position: relative;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.results ul li .learn_more span{
+			position: absolute;
+			display: inline-block;
+			width: 10px;
+			height: 2px;
+			background-color: #7E7E7E;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-left: 14px;
+			border-radius: 50px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.results ul li .learn_more span:before{
+			position: absolute;
+			content: "";
+			width: 6px;
+			height: 2px;
+			background-color: #7E7E7E;
+			transform: rotate(45deg);
+			right: 0px;
+			top: -2px;
+			border-radius: 50px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.results ul li .learn_more span:after{
+			position: absolute;
+			content: "";
+			width: 6px;
+			height: 2px;
+			background-color: #7E7E7E;
+			transform: rotate(-45deg);
+			right: 0px;
+			bottom: -2px;
+			border-radius: 50px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.results ul li .list_inner:hover .learn_more span{
+			width: 30px;
+			background-color: #fff;
+		}
+		.results ul li .list_inner:hover .learn_more span:before,
+		.results ul li .list_inner:hover .learn_more span:after{
+			background-color : #fff;
+		}
+		.results ul li .list_inner:hover .learn_more{
+			color : #fff;
+		}
+		.full_link{
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			z-index: 5;
+		}
+		.results .popup_informations{
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			z-index: -11;
+			display: none;
+		}
+		
+		.my_carousel{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			position: relative;
+		}
+		.my_carousel ul{
+			margin: 0px;
+			list-style-type: none;
+		}
+		.my_carousel ul li{
+			margin: 0px;
+		}
+		.my_carousel ul li .list_inner{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			position: relative;
+		}
+		.my_carousel ul li .image{
+			position: relative;
+			overflow: hidden;
+			border-radius: 10px;
+		}
+		.my_carousel ul li .image img{
+			position: relative;
+			opacity: 0;
+			min-width: 100%;
+		}
+		.my_carousel ul li .image .main{
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			border-radius: 10px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.my_carousel ul li .list_inner:hover .image .main{
+			transform: scale(1.1) translateZ(0);
+		}
+		.my_carousel ul .details{
+			width: 100%;
+			float: left;
+			padding-top: 10px;
+		}
+		.my_carousel ul .details h3 a{
+			text-decoration: none;
+			color: #1A1A1A;
+			font-size: 22px;
+			font-weight: 700;
+		}
+		.my_carousel ul .details span a{
+			text-decoration: none;
+			color: #7E7E7E;
+			font-size: 16px;
+			font-weight: 400;
+		}
+		.my_carousel .prev_button,
+		.my_carousel .next_button{
+			position: absolute;
+			display: block;
+			width: 80px;
+			height: 80px;
+			border-radius: 100%;
+			border: 2px solid #7E7E7E;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-top: -43px;
+			z-index: 6;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.my_carousel .prev_button:hover,
+		.my_carousel .next_button:hover{
+			border-color: rgba(255,255,255,.2);
+			background-color: #000;
+		}
+		.my_carousel .prev_button{
+			left: -33px;
+		}
+		.my_carousel .next_button{
+			right: -33px;
+		}
+		.my_carousel .prev_button span,
+		.my_carousel .next_button span{
+			position: absolute;
+			width: 35px;
+			height: 2px;
+			background-color: #7E7E7E;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			border-radius: 50px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.my_carousel .prev_button:hover span,
+		.my_carousel .next_button:hover span{
+			background-color: #fff;
+		}
+		.my_carousel .prev_button span:before{
+			position: absolute;
+			content: "";
+			width: 22px;
+			height: 2px;
+			background-color: #7E7E7E;
+			left: -2px;
+			top: -8px;
+			transform: rotate(-45deg);
+			border-radius: 50px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.my_carousel .prev_button span:after{
+			position: absolute;
+			content: "";
+			width: 22px;
+			height: 2px;
+			background-color: #7E7E7E;
+			left: -2px;
+			bottom: -8px;
+			transform: rotate(45deg);
+			border-radius: 50px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.my_carousel .next_button span:before{
+			position: absolute;
+			content: "";
+			width: 22px;
+			height: 2px;
+			background-color: #7E7E7E;
+			right: -2px;
+			top: -8px;
+			transform: rotate(45deg);
+			border-radius: 50px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.my_carousel .next_button span:after{
+			position: absolute;
+			content: "";
+			width: 22px;
+			height: 2px;
+			background-color: #7E7E7E;
+			right: -2px;
+			bottom: -8px;
+			transform: rotate(-45deg);
+			border-radius: 50px;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.my_carousel .prev_button:hover span:before,
+		.my_carousel .prev_button:hover span:after,
+		.my_carousel .next_button:hover span:before,
+		.my_carousel .next_button:hover span:after{
+			background-color: #fff;
+		}
+		
+		.related{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			padding: 20px 0px;
+		}
+		.related .news_inner{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			padding-top: 60px;
+		}
+		.related ul li .news_details{
+			width: 100%;
+			float: left;
+			padding-top: 9px;
+		}
+		.related ul li .news_details span{
+			font-size: 16px;
+			display: inline-block;
+		}
+		.related ul li .news_details span a{
+			text-decoration: none;
+			color: #7E7E7E;
+			position: relative;
+			display: inline-block;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.related ul li .news_details span a:before{
+			position: relative;
+			content: ".";
+			font-size: 40px;
+			top: -3px;
+			color: #7e7e7e;
+			padding: 0px 5px;
+		}
+		.related ul li .news_details .title{
+			line-height: 1.2;
+		}
+		.related ul li .news_details .title a{
+			text-decoration: none;
+			color: #34495E;
+			font-size: 22px;
+			font-weight: 700;
+			
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+			transition: all .3s ease;
+		}
+		.related .main_content{
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			z-index: -11;
+			display: none;
+		}
+		body.modal{
+			overflow-y: hidden;
+		}
+		
+		.footer{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			background-color: #F9F9FC;
+			padding: 20px 0px;
+		}
+		.footer .extra_info{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			/* padding-top: 60px; */
+			/* margin-bottom: 30px; */
+		}
+		
+		.social-links {
+			margin-bottom: 25px;
+			display: flex;
+			width: 10%;
+			justify-content: space-between;
+		}
+		
+		.social-links a {
+			color: #FAC748 !important;
+		}
+		
+		.footer .extra_info .wrapper{
+			margin: 0px 0px 0px -30px;
+			list-style-type: none;
+		}
+		
+		.footer .extra_info .wrapper p {
+			font-size: 12px;
+		}
+		
+		.footer .extra_info .wrapper > li{
+			margin: 0px 0px 30px 0px;
+			float: left;
+			width: 50%;
+			padding-left: 30px;
+		}
+		.footer .extra_info .wrapper > li .list_inner{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+			position: relative;
+			background-color: #fff;
+			padding: 33px 35px 41px 35px;
+		}
+		.footer .extra_info .in{
+			margin: 0px;
+			list-style-type: none;
+		}
+		.footer .extra_info .in li{
+			margin: 0px 0px 8px 0px;
+			width: 100%;
+			float: left;
+		}
+		.footer .extra_info .in li :last-child{
+			margin-bottom: 0px;
+		}
+		.footer .extra_info h3{
+			font-size: 20px;
+			font-weight: 500;
+			margin-bottom: 10px;
+		}
+		.footer .extra_info a{
+			text-decoration: none;
+			color: #7E7E7E;
+		}
+		.footer .mainpart{
+			width: 100%;
+			height: auto;
+			clear: both;
+			display: flex;
+		}
+		.footer .mainpart .left{
+			width: 50%;
+			background-color: #fff;
+			padding: 55px 45px 60px 45px;
+			margin-right: 30px;
+		}
+		.footer .mainpart .left .title{
+			width: 100%;
+			float: left;
+			margin-bottom: 14px;
+		}
+		.footer .mainpart .left .title p{
+			font-size: 25px;
+			line-height: 2;
+		}
+		.footer .mainpart .left .title span{
+			font-weight: 600;
+			color: #1A1A1A;
+		}
+		.footer .fields{
+			width: 100%;
+			height: auto;
+			clear: both;
+			float: left;
+		}
+		.footer .first_row{
+			width: 100%;
+			margin-bottom: 60px;
+		}
+		.footer .second{
+			width: 100%;
+			margin-bottom: 60px;
+		}
+		.footer .third{
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		.footer input{
+			width: 100%;
+			height: 50px;
+			border: none;
+			border-bottom: 1px solid #CBD3D9;
+			background-color: transparent;
+			font-size: 16px;
+			color: #7E7E7E;
+			font-weight: 500;
+			font-family: "Poppins";
+			padding-left: 0px !important;
+		}
+		.footer input:focus{
+			outline: none;
+			border-bottom-color: #0F172A;
+			background-color: transparent;
+		}
+		.footer textarea{
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid #CBD3D9;
+			background-color: transparent;
+			font-size: 16px;
+			color: #7E7E7E;
+			font-weight: 500;
+			font-family: "Poppins";
+			height: 50px;
+			resize: none;
+			padding-left: 0px !important;
+		}
+		.footer textarea:focus{
+			outline: none;
+			border-bottom-color: #0F172A;
+			background-color: transparent;
+		}
+		.footer .empty_notice{
+			color: #F52225;
+			margin-bottom: 7px;
+			display: none;
+			text-align: left;
+			font-weight: 500;
+		}
+		.footer .contact_error{
+			color: #F52225;
+			text-align: left;
+			font-weight: 500;
+		}
+		.footer .returnmessage{
+			color:#3A00FF;
+			margin-bottom: 7px;
+			text-align: left;
+			font-weight: 500;
+		}
+		.footer .right{
+			width: 50%;
+			margin-left: 30px;
+		}
+		.footer .right .map{
+			min-height: 594px;
+			width: 100%;
+			filter: grayscale(1);
+		}
+		
+	@media (max-width: 1600px) {
+	.container{max-width: 1170px;}
+	/* .my_carousel .prev_button, .my_carousel .next_button{width: 65px;height: 65px;}
+	.results ul li .list_inner{padding-right: 40px;}
+	.results ul li h3{font-size: 23px;}
+	.footer .mainpart .left .title p{font-size: 20px;}
 	
-	<body> 
+	.sidebar .logo{padding: 30px 40px;}
+	.sidebar .menu{padding: 50px 40px;}
+	.sidebar .menu ul li a{padding: 2px 15px;}
+	.sidebar .menu ul li{margin-bottom: 4px;}
+	.sidebar .author .inner{padding: 30px 55px;}
+	.progress_inner .label{margin-bottom: 5px;}
+	.progress_inner{margin-bottom: 20px;} */
+}
+@media (max-width: 1040px) {
+	.sidebar{display: none;}
+	.mainpart{padding-left: 0px;}
+	body.opened .mainpart{padding-left: 0px;}
+	.results .service_list .container{flex-direction: column;}
+	/* .mainpart{padding-left: 0px;}
+	body.opened .mainpart{padding-left: 0px;}
+	.results ul li{width: 50%;}
+	.footer .extra_info .wrapper{margin: 0px;}
+	.footer .extra_info .wrapper > li{width: 100%;padding-left: 0px;}
+	.footer .mainpart{flex-direction: column;align-items: baseline;}
+	.footer .mainpart .left{width: 100%;margin-right: 0px;margin-bottom: 50px;}
+	.footer .right{width: 100%;margin-left: 0px;}
+	.container{padding: 0px 30px;}
+	 */
+}
+@media (max-width: 768px) {
+	.mainpart{padding-left: 0px;}
+	body.opened .mainpart{padding-left: 0px;}
+	/* .title h3{font-size: 45px;}
+	.results ul{margin: 0px;}
+	.results ul li{width: 100%;padding-left: 0px;}
+	.my_carousel .prev_button, .my_carousel .next_button{width: 50px;height: 50px;}
+	.my_carousel .next_button{right: -25px;}
+	.my_carousel .prev_button{left: -25px;}
+	.my_carousel .prev_button span, .my_carousel .next_button span{width: 25px;}
+	.my_carousel .next_button span:before{width: 15px;top: -5px;}
+	.my_carousel .next_button span:after{width: 15px;bottom: -5px;}
+	.my_carousel .prev_button span:before{width: 15px;top: -5px;}
+	.my_carousel .prev_button span:after{width: 15px;bottom: -5px;}
+	.results ul li .list_inner{padding-left: 20px;padding-right: 20px;}
+	.footer .mainpart .left{padding-left: 20px;padding-right: 20px;}
+	.footer .extra_info .wrapper > li .list_inner{padding-left: 20px;padding-right: 20px;} */
+}
 		
-		<!-- PRELOADER -->
-		<div id="preloader">
-			<div class="loader_line"></div>
+	</style>
+</head>
+
+<body> 
+	
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="loader_line"></div>
+	</div>
+	<!-- /PRELOADER -->
+	
+	<!-- WRAPPER ALL -->
+	<div class="all_wrap" data-magic-cursor=""> <!-- If you want disable magic cursor add value "hide" -->	
+		
+		<!-- SIDEBAR -->
+		<div class="sidebar">
+			<div class="sidebar_inner">
+				<div class="logo">
+					<a href="https://dailynorthwestern.com/"><img src="img/logo/footer_logo.png" alt=""/></a>
+				</div>
+				<div class="menu">
+					<!-- MAPS -->
+					<div class="menu-item maps">
+						<a class="icon" href="#evanston"><img class="svg custom" src="img/map/evanston.svg" alt="" style="width:50px;"/></a>
+						<a class="icon" href="#township"><img class="svg custom" src="img/map/cook_county.svg" alt="" style="width:50px;"/></a>
+						<a class="icon" href="#state"><img class="svg custom" src="img/map/illinois.svg" alt="" style="width:50px;"/></a>
+						<a class="icon" href="#federal"><img class="svg custom" src="img/map/usa.svg" alt="" style="width:50px;"/></a>
+					</div>
+					<!-- RELATED COVERAGE -->
+					<div class="menu-item">
+						<a href="#related">Related coverage</a>
+					</div>
+					<!-- TWITTER FEED -->
+					<iframe src="https://widget.taggbox.com/113410" style="width:100%;height:600px;border:none;"></iframe>					<!-- <div class="taggbox" style="width:100%;height:100%;" data-widget-id="113397" data-tags="false"></div><script src="https://widget.taggbox.com/embed-lite.min.js" type="text/javascript"></script> -->
+				</div>
+			</div>
 		</div>
-		<!-- /PRELOADER -->
+		<!-- /SIDEBAR -->
 		
-		<!-- WRAPPER ALL -->
-		<div class="all_wrap" data-magic-cursor=""> <!-- If you want disable magic cursor add value "hide" -->	
-			
-			<!-- SIDEBAR -->
-			<!-- <div class="sidebar">
-				<div class="sidebar_inner">
-					<div class="logo">
-						<a href="https://dailynorthwestern.com/"><img src="img/logo/footer_logo.png" alt=""/></a>
+		<!-- MAINPART -->
+		<div class="mainpart">
+			<!-- RANKED-CHOICE -->
+			<div class="results" id="evanston">
+				<div class="container">
+					<!-- HEADER -->
+					<div class="title">
+						<h3>Evanston elections</h3>
+						<p>Evanston residents will vote on a ranked-choice voting referendum that would implement a new style of vote-counting in the city.</p>
 					</div>
-					<div class="menu"> -->
-						<!-- MAPS -->
-						<!-- <div class="menu-item maps">
-							<a class="icon" href="#home"><img class="svg custom" src="img/map/evanston.svg" alt="" /></a>
-							<a class="icon" href="#home"><img class="svg custom" src="img/map/cook_county.svg" alt="" /></a>
-							<a class="icon" href="#home"><img class="svg custom" src="img/map/illinois.svg" alt="" /></a>
-							<a class="icon" href="#home"><img class="svg custom" src="img/map/usa.svg" alt="" /></a>
-						</div> -->
-						<!-- RELATED COVERAGE -->
-						<!-- <div class="menu-item">
-							<a href="#about">Related coverage</a>
-						</div> -->
-						<!-- TWITTER FEED -->
-						<!-- <div class="taggbox" style="width:100%;height:100%;" data-widget-id="113367" data-tags="false"></div>
-					</div>
-				</div>
-			</div> -->
-			<!-- /SIDEBAR -->
-			
-			<!-- MAINPART -->
-			<div class="mainpart">
-				<!-- RANKED-CHOICE -->
-				<div class="results" id="service">
-					<div class="container">
-						<!-- HEADER -->
-						<div class="title">
-							<h3>Evanston elections</h3>
-							<p>Evanston residents will vote on a ranked-choice voting referendum that would implement a new style of vote-counting in the city.</p>
+					<!-- /HEADER -->
+					
+					<!-- MAIN -->
+					<div class="service_list">
+						<div class="votes child">
+							<p>Live results</p>
+							<iframe src='https://flo.uri.sh/visualisation/11751505/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>								
 						</div>
-						<!-- /HEADER -->
-						
-						<!-- MAIN -->
-						<div class="service_list">
-							<div class="votes child">
-								<p>Live results</p>
-								<iframe src='https://flo.uri.sh/visualisation/11751505/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>								
-							</div>
-							<div class="container">
-								<!-- MAP -->
-								<!-- <div class="child map evanston-map">
-									<iframe src='https://flo.uri.sh/visualisation/11750681/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-								</div> -->
-								
-								<!-- OTHER STATS -->
-								<div class="child info">
-									<!-- <div class="projected">
-										<p>Projected results</p>
-										<iframe src='https://flo.uri.sh/visualisation/11751301/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-									</div> -->
-									<br>
-									
-								</div>
-							</div>
-							
-						</div>
-						<!-- /MAIN -->
-					</div>
-				</div>
-				<!-- <div class="related" id="blog">
-						<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
-							<div class="my_carousel">
-								<ul class="owl-carousel">
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/1.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>July 07,2021 <a href="#">City</a></span>
-												<h3 class="title"><a href="#">Dostie Memorie</a></h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/2.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>June 25,2021 <a href="#">Branding</a></span>
-												<h3 class="title"><a href="#">Mario Pocopoc</a></h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/3.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>May 01,2021 <a href="#">Lifestyle</a></span>
-												<h3 class="title"><a href="#">Jacuba Bamba</a></h3>
-											</div>
-
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/4.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>April 07,2021 <a href="#">Design</a></span>
-												<h3 class="title"><a href="#">Forzo Immobile</a></h3>
-											</div>
-
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/2.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>March 25,2021 <a href="#">Branding</a></span>
-												<h3 class="title"><a href="#">Mosby Lavette</a></h3>
-											</div>
-										</div>
-									</li>
-								</ul>
-								<a class="prev_button" href="#"><span></span></a>
-								<a class="next_button" href="#"><span></span></a>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!-- /RANKED-CHOICE -->
-				
-				<!-- TOWNSHIP -->
-				<div class="results" id="service">
-					<div class="container">
-						<!-- HEADER -->
-						<div class="title">
-							<h3>Township elections</h3>
-							<p>Evanston will vote on the Cook County Board of Commissioners and Cook County Clerk races.</p>
-							<!-- <div class="buttons">
-								<button type="button" id="clerk">CLERK</button>
-								<button type="button" id="board">BOARD OF COMMISSIONERS</button>
+						<div class="container">
+							<!-- MAP -->
+							<!-- <div class="child map evanston-map">
+								<iframe src='https://flo.uri.sh/visualisation/11750681/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
 							</div> -->
-						</div>
-						
-						<!-- /HEADER -->
-						
-						<!-- MAIN -->
-						<div class="service_list">
-							<div class="votes child">
-								<p>Live results</p>
-								<iframe src='https://flo.uri.sh/visualisation/11751102/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-								
-							</div>
 							
-							<div class="container">
-								<!-- <div class="child info projected" style="flex-grow: 1">
+							<!-- OTHER STATS -->
+							<div class="child info">
+								<!-- <div class="projected">
 									<p>Projected results</p>
-									<iframe src='https://flo.uri.sh/visualisation/11751439/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+									<iframe src='https://flo.uri.sh/visualisation/11751301/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
 								</div> -->
-								<!-- <br> -->
+								<br>
 								
 							</div>
 						</div>
-						<!-- /MAIN -->
-					</div>
-				</div>
-				<!-- <div class="related" id="blog">
-					<div class="container">
-						<div class="title">
-							<h6>Related Coverage:</h6>
-						</div>
-						<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
-							<div class="my_carousel">
-								<ul class="owl-carousel">
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/1.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>July 07,2021 <a href="#">City</a></span>
-												<h3 class="title"><a href="#">Dostie Memorie</a></h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/2.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>June 25,2021 <a href="#">Branding</a></span>
-												<h3 class="title"><a href="#">Mario Pocopoc</a></h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/3.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>May 01,2021 <a href="#">Lifestyle</a></span>
-												<h3 class="title"><a href="#">Jacuba Bamba</a></h3>
-											</div>
-
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/4.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>April 07,2021 <a href="#">Design</a></span>
-												<h3 class="title"><a href="#">Forzo Immobile</a></h3>
-											</div>
-
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/2.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>March 25,2021 <a href="#">Branding</a></span>
-												<h3 class="title"><a href="#">Mosby Lavette</a></h3>
-											</div>
-										</div>
-									</li>
-								</ul>
-								<a class="prev_button" href="#"><span></span></a>
-								<a class="next_button" href="#"><span></span></a>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!-- /TOWNSHIP -->
-				
-				<!-- STATE -->
-				<div class="results" id="service">
-					<div class="container">
-						<!-- HEADER -->
-						<div class="title">
-							<h3>State elections</h3>
-							<p>Illinois residents will also vote for Governor, a new AG, Secretary of State, and three Supreme Court justices. Evanston residents will also help decide on three state representatives and whether to add the right to collective bargaining to the state constitution.</p>
-							
-						</div>
-						<!-- /HEADER -->
 						
-						<!-- MAIN -->
-						<div class="service_list">
-							<div class="votes child">
-								<p>Live results</p>
-								<iframe src='https://flo.uri.sh/visualisation/11751002/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-							</div>
-							<!-- <div class="buttons">
-								<button type="button" id="governor">GUBERNATORIAL</button>
-								<button type="button" id="stateSenate">STATE SENATE</button>
-								<button type="button" id="stateHouse">STATE HOUSE</button>
-								<button type="button" id="attorney">ATTORNEY GENERAL</button>
-								<button type="button" id="secretary">SECRETARY OF STATE</button>
-								<button type="button" id="referendum">COLLECTIVE BARGAINING REFERENDUM</button>
-							</div> -->
-							<div class="container">
-								
-								<!-- <div id="state-map" class="child map">
-									<iframe src='https://flo.uri.sh/visualisation/11750879/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-								</div> -->
-								<div class="child info">
-									<!-- <div class="projected">
-										<p>Projected results</p>
-										<iframe src='https://flo.uri.sh/visualisation/11751523/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-									</div> -->
-									<br>
-									
-								</div>
-							</div>
-							
-						</div>
-						<!-- /MAIN -->
 					</div>
+					<!-- /MAIN -->
 				</div>
-				<div class="related" id="blog">
-					<div class="container">
-						<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
-							<div class="my_carousel">
-								<ul class="owl-carousel">
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/election.jpg" alt="" />
-												<div class="main" data-img-url="img/election.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>Jacob Fulton <a href="#">City</a></span>
-												<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/incumbent-gov-j-b-pritzker-projected-to-win-gubernatorial-race/">Incumbent Gov. J.B. Pritzker projected to win gubernatorial race</a></h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/election.jpg" alt="" />
-												<div class="main" data-img-url="img/election.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>Jorja Siemons <a href="#">City</a></span>
-												<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/top-stories/rep-robyn-gabel-projected-to-win-reelection-to-statehouse-representing-district-18/">Rep. Robyn Gabel projected to win reelection to statehouse representing District 18</a></h3>
-											</div>
-										</div>
-									</li>
-								</ul>
-								<a class="prev_button" href="#"><span></span></a>
-								<a class="next_button" href="#"><span></span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /STATE -->
-				
-				<!-- FEDERAL -->
-				<div class="results" id="service">
-					<div class="container">
-						<!-- HEADER -->
-						<div class="title">
-							<h3>Federal elections</h3>
-							<p>Evanston will vote on several key races in congress, including one U.S. Senator and the 9th District U.S. Representative.</p>
-							
-						</div>
-						<!-- /HEADER -->
-						
-						<!-- MAIN -->
-						<div class="service_list">
-							<div class="votes child">
-								<p>Live results</p>
-								<iframe src='https://flo.uri.sh/visualisation/11751072/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-
-							</div>
-							<!-- <div class="buttons">
-								<button type="button" id="usSenate">U.S. SENATE</button>
-								<button type="button" id="usHouse">U.S. HOUSE</button>
-							</div> -->
-							<div class="container">
-								
-								<!-- <div id="federal-map" class="child map">
-									<iframe src='https://flo.uri.sh/visualisation/11750744/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-								</div> -->
-								<div class="child info">
-									<!-- <div class="projected">
-										<p>Projected results</p>
-										<iframe src='https://flo.uri.sh/visualisation/11751587/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-									</div> -->
-									<br>
-									
-								</div>
-							</div>
-							
-						</div>
-						<!-- /MAIN -->
-					</div>
-				</div>
-				<div class="related" id="blog">
-					<div class="container">
-						<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
-							<div class="my_carousel">
-								<ul class="owl-carousel">
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/election.jpg" alt="" />
-												<div class="main" data-img-url="img/election.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>Lily Carey <a href="#">City</a></span>
-												<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/democratic-incumbent-tammy-duckworth-projected-to-win-u-s-senate-seat/" target="_blank">Democratic Incumbent Tammy Duckworth projected to win U.S. Senate seat</a></h3>
-											</div>
-										</div>
-									</li>
-									<!-- <li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/2.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>June 25,2021 <a href="#">Branding</a></span>
-												<h3 class="title"><a href="#">Mario Pocopoc</a></h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/3.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>May 01,2021 <a href="#">Lifestyle</a></span>
-												<h3 class="title"><a href="#">Jacuba Bamba</a></h3>
-											</div>
-
-										</div>
-									</li> -->
-									<!-- <li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/4.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>April 07,2021 <a href="#">Design</a></span>
-												<h3 class="title"><a href="#">Forzo Immobile</a></h3>
-											</div>
-
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/2.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>March 25,2021 <a href="#">Branding</a></span>
-												<h3 class="title"><a href="#">Mosby Lavette</a></h3>
-											</div>
-										</div>
-									</li> -->
-								</ul>
-								<a class="prev_button" href="#"><span></span></a>
-								<a class="next_button" href="#"><span></span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /FEDERAL -->
-				
-				<!-- RELATED COVERAGE -->
-				<!-- <div class="related" id="blog">
-					<div class="container">
-						<div class="title">
-							<h3>Related Coverage:</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
-						</div>
-						<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
-							<div class="my_carousel">
-								<ul class="owl-carousel">
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/1.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>July 07,2021 <a href="#">Travel</a></span>
-												<h3 class="title"><a href="#">Dostie Memorie</a></h3>
-											</div>
-											<div class="main_content">
-												<div class="descriptions">
-													<p class="bigger">Just because we can't get out and about like we normally would, doesn’t mean we have to stop taking pictures. There’s still plenty you can do, provided you're prepared to use some imagination. Here are a few ideas to keep you shooting until normal life resumes.</p>
-													<p>Most photographers love to shoot the unusual, and you don’t get much more unusual than These Unprecedented Times. Right now everything counts as out of the ordinary. There are a number of remarkable things about these lockdown days that are worth photographing now so we can remember them when it is all over.</p>
-													<p>Streets empty that are usually busy are remarkable and can evoke the sense of historical pictures from before the invention of the motorcar. Other things that are different at the moment will be queues to get into stores and the lines marked out on the floor to show how far apart we should be.</p>
-													<div class="quotebox">
-														<p>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</p>
-													</div>
-													<p>Pretend everything is new and that you haven’t seen it before, and then you will be free to notice the leading lines, the places where one edge meets another in delightful geometric harmony, and how the ordinary things in the kitchen are transformed when the light is on or off.</p>
-													<p>The trick here is to look slowly, and then look again. Take the time to look in detail and to look at the same thing from different angles, with different light, long lenses and wide lenses. Then move to the left a bit. You may never feel the need to leave the house again.</p>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/2.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>June 25,2021 <a href="#">Branding</a></span>
-												<h3 class="title"><a href="#">Mario Pocopoc</a></h3>
-											</div>
-											<div class="main_content">
-												<div class="descriptions">
-													<p class="bigger">Just because we can't get out and about like we normally would, doesn’t mean we have to stop taking pictures. There’s still plenty you can do, provided you're prepared to use some imagination. Here are a few ideas to keep you shooting until normal life resumes.</p>
-													<p>Most photographers love to shoot the unusual, and you don’t get much more unusual than These Unprecedented Times. Right now everything counts as out of the ordinary. There are a number of remarkable things about these lockdown days that are worth photographing now so we can remember them when it is all over.</p>
-													<p>Streets empty that are usually busy are remarkable and can evoke the sense of historical pictures from before the invention of the motorcar. Other things that are different at the moment will be queues to get into stores and the lines marked out on the floor to show how far apart we should be.</p>
-													<div class="quotebox">
-														<p>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</p>
-													</div>
-													<p>Pretend everything is new and that you haven’t seen it before, and then you will be free to notice the leading lines, the places where one edge meets another in delightful geometric harmony, and how the ordinary things in the kitchen are transformed when the light is on or off.</p>
-													<p>The trick here is to look slowly, and then look again. Take the time to look in detail and to look at the same thing from different angles, with different light, long lenses and wide lenses. Then move to the left a bit. You may never feel the need to leave the house again.</p>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/3.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>May 01,2021 <a href="#">Lifestyle</a></span>
-												<h3 class="title"><a href="#">Jacuba Bamba</a></h3>
-											</div>
-											<div class="main_content">
-												<div class="descriptions">
-													<p class="bigger">Just because we can't get out and about like we normally would, doesn’t mean we have to stop taking pictures. There’s still plenty you can do, provided you're prepared to use some imagination. Here are a few ideas to keep you shooting until normal life resumes.</p>
-													<p>Most photographers love to shoot the unusual, and you don’t get much more unusual than These Unprecedented Times. Right now everything counts as out of the ordinary. There are a number of remarkable things about these lockdown days that are worth photographing now so we can remember them when it is all over.</p>
-													<p>Streets empty that are usually busy are remarkable and can evoke the sense of historical pictures from before the invention of the motorcar. Other things that are different at the moment will be queues to get into stores and the lines marked out on the floor to show how far apart we should be.</p>
-													<div class="quotebox">
-														<p>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</p>
-													</div>
-													<p>Pretend everything is new and that you haven’t seen it before, and then you will be free to notice the leading lines, the places where one edge meets another in delightful geometric harmony, and how the ordinary things in the kitchen are transformed when the light is on or off.</p>
-													<p>The trick here is to look slowly, and then look again. Take the time to look in detail and to look at the same thing from different angles, with different light, long lenses and wide lenses. Then move to the left a bit. You may never feel the need to leave the house again.</p>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/4.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>April 07,2021 <a href="#">Design</a></span>
-												<h3 class="title"><a href="#">Forzo Immobile</a></h3>
-											</div>
-											<div class="main_content">
-												<div class="descriptions">
-													<p class="bigger">Just because we can't get out and about like we normally would, doesn’t mean we have to stop taking pictures. There’s still plenty you can do, provided you're prepared to use some imagination. Here are a few ideas to keep you shooting until normal life resumes.</p>
-													<p>Most photographers love to shoot the unusual, and you don’t get much more unusual than These Unprecedented Times. Right now everything counts as out of the ordinary. There are a number of remarkable things about these lockdown days that are worth photographing now so we can remember them when it is all over.</p>
-													<p>Streets empty that are usually busy are remarkable and can evoke the sense of historical pictures from before the invention of the motorcar. Other things that are different at the moment will be queues to get into stores and the lines marked out on the floor to show how far apart we should be.</p>
-													<div class="quotebox">
-														<p>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</p>
-													</div>
-													<p>Pretend everything is new and that you haven’t seen it before, and then you will be free to notice the leading lines, the places where one edge meets another in delightful geometric harmony, and how the ordinary things in the kitchen are transformed when the light is on or off.</p>
-													<p>The trick here is to look slowly, and then look again. Take the time to look in detail and to look at the same thing from different angles, with different light, long lenses and wide lenses. Then move to the left a bit. You may never feel the need to leave the house again.</p>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/news/2.jpg"></div>
-												<a class="full_link" href="#"></a>
-											</div>
-											<div class="news_details">
-												<span>March 25,2021 <a href="#">Branding</a></span>
-												<h3 class="title"><a href="#">Mosby Lavette</a></h3>
-											</div>
-											<div class="main_content">
-												<div class="descriptions">
-													<p class="bigger">Just because we can't get out and about like we normally would, doesn’t mean we have to stop taking pictures. There’s still plenty you can do, provided you're prepared to use some imagination. Here are a few ideas to keep you shooting until normal life resumes.</p>
-													<p>Most photographers love to shoot the unusual, and you don’t get much more unusual than These Unprecedented Times. Right now everything counts as out of the ordinary. There are a number of remarkable things about these lockdown days that are worth photographing now so we can remember them when it is all over.</p>
-													<p>Streets empty that are usually busy are remarkable and can evoke the sense of historical pictures from before the invention of the motorcar. Other things that are different at the moment will be queues to get into stores and the lines marked out on the floor to show how far apart we should be.</p>
-													<div class="quotebox">
-														<p>Most photographers find it hard to see interesting pictures in places in which they are most familiar. A trip somewhere new seems always exactly what our photography needed, as shooting away from home consistently inspires us to new artistic heights.</p>
-													</div>
-													<p>Pretend everything is new and that you haven’t seen it before, and then you will be free to notice the leading lines, the places where one edge meets another in delightful geometric harmony, and how the ordinary things in the kitchen are transformed when the light is on or off.</p>
-													<p>The trick here is to look slowly, and then look again. Take the time to look in detail and to look at the same thing from different angles, with different light, long lenses and wide lenses. Then move to the left a bit. You may never feel the need to leave the house again.</p>
-												</div>
-											</div>
-										</div>
-									</li>
-								</ul>
-								<a class="prev_button" href="#"><span></span></a>
-								<a class="next_button" href="#"><span></span></a>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!-- /RELATED COVERAGE -->
-				
-				<!-- FOOTER -->
-				<div class="footer" id="contact">
-					<div class="container">
-						<div class="title">
-							<h3>The Daily Northwestern</h3>
-						</div>
-						
-						<div class="extra_info">
-							<div class="social-links">
-								<a href="http://twitter.com/thedailynu" target="_blank"><i class="fab fa-twitter"></i></a>
-								<a href="https://www.facebook.com/thedailynorthwestern" target="_blank"><i class="fab fa-facebook-f"></i></a>
-								<a href="https://www.instagram.com/thedailynu/" target="_blank"><i class="fab fa-instagram"></i></a>
-							</div>
-							<ul class="wrapper">
-								<li class="wow fadeInLeft" data-wow-duration="1s">
+			</div>
+			<div class="related" id="blog">
+				<div class="container">
+					<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
+						<div class="my_carousel">
+							<ul class="owl-carousel">
+								<li>
 									<div class="list_inner">
-										<h3>Midterm Elections 2022</h3>
-										<p>Published on November 8, 2022. <br>&copy; <a href="https://dailynorthwestern.com/" target="_blank">The Daily Northwestern</a>. Template by marketify.</p>
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Saul Pink <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/evanston-becomes-first-city-in-illinois-to-adopt-ranked-choice-voting/">Evanston becomes first city in Illinois to adopt ranked-choice voting
+											</a></h3>
+										</div>
 									</div>
 								</li>
-								<li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+								<li>
 									<div class="list_inner">
-										<h3>Editorial Team</h3>
-										<ul class="in">
-											<li><strong>Editor-in-chief</strong>: Jacob Fulton</li>
-											<li><strong>City Editor</strong>: Avani Kalra</li>
-											<li><strong>Digital Managing Editor</strong>: Angeli Mittal</li>
-											<li>Site created by Angeli Mittal and Zoey Soh</li>
-										</ul>
+										<div class="image">
+											<img src="img/indivisible.jpg" alt="" />
+											<div class="main" data-img-url="img/indivisible.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Nicole Markus <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/indivisible-evanston-hosts-rep-jan-schakowsky-at-midterm-watch-party/">Indivisible Evanston hosts Rep. Jan Schakowsky at midterm watch party
+											</a></h3>
+										</div>
 									</div>
 								</li>
 							</ul>
+							<a class="prev_button" href="#"><span></span></a>
+							<a class="next_button" href="#"><span></span></a>
 						</div>
 					</div>
 				</div>
-				<!-- /FOOTER -->
-				
 			</div>
-			<!-- /MAINPART -->
+			<!-- /RANKED-CHOICE -->
+			
+			<!-- TOWNSHIP -->
+			<div class="results" id="township">
+				<div class="container">
+					<!-- HEADER -->
+					<div class="title">
+						<h3>Township elections</h3>
+						<p>Evanston will vote on the Cook County Board of Commissioners and Cook County Clerk races.</p>
+						<!-- <div class="buttons">
+							<button type="button" id="clerk">CLERK</button>
+							<button type="button" id="board">BOARD OF COMMISSIONERS</button>
+						</div> -->
+					</div>
+					
+					<!-- /HEADER -->
+					
+					<!-- MAIN -->
+					<div class="service_list">
+						<div class="votes child">
+							<p>Live results</p>
+							<iframe src='https://flo.uri.sh/visualisation/11751102/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+							
+						</div>
+						
+						<div class="container">
+							<!-- <div class="child info projected" style="flex-grow: 1">
+								<p>Projected results</p>
+								<iframe src='https://flo.uri.sh/visualisation/11751439/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+							</div> -->
+							<!-- <br> -->
+							
+						</div>
+					</div>
+					<!-- /MAIN -->
+				</div>
+			</div>
+			<div class="related" id="blog">
+				<div class="container">
+					<div class="title">
+						<h6>Related Coverage:</h6>
+					</div>
+					<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
+						<div class="my_carousel">
+							<ul class="owl-carousel">
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Kristen Axtman <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/lateststories/michael-frerichs-projected-to-win-third-term-as-illinois-treasurer/">Cook County voters re-elect Karen Yarbrough to serve as Cook County clerk</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Jonah Elkowitz <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/incumbent-toni-preckwinkle-projected-to-win-cook-county-board-of-commissioners-presidential-race/">Incumbent Toni Preckwinkle projected to win Cook County Board of Commissioners presidential race</a></h3>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<a class="prev_button" href="#"><span></span></a>
+							<a class="next_button" href="#"><span></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /TOWNSHIP -->
+			
+			<!-- STATE -->
+			<div class="results" id="state">
+				<div class="container">
+					<!-- HEADER -->
+					<div class="title">
+						<h3>State elections</h3>
+						<p>Illinois residents will also vote for Governor, a new AG, Secretary of State, and three Supreme Court justices. Evanston residents will also help decide on three state representatives and whether to add the right to collective bargaining to the state constitution.</p>
+						
+					</div>
+					<!-- /HEADER -->
+					
+					<!-- MAIN -->
+					<div class="service_list">
+						<div class="votes child">
+							<p>Live results</p>
+							<iframe src='https://flo.uri.sh/visualisation/11751002/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+						</div>
+						<div class="buttons container">
+							<button type="button" id="governor">GUBERNATORIAL</button>
+							<button type="button" id="stateSenate">STATE SENATE</button>
+							<button type="button" id="stateHouse">STATE HOUSE</button>
+							<button type="button" id="attorney">ATTORNEY GENERAL</button>
+							<button type="button" id="secretary">SECRETARY OF STATE</button>
+							<!-- <button type="button" id="referendum">COLLECTIVE BARGAINING REFERENDUM</button> -->
+						</div>
+						<br>
+						<div class="container">
+							
+							<div id="state-map" class="child map">
+								<iframe src='https://flo.uri.sh/visualisation/11750879/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+							</div>
+							<div class="child info">
+								<div class="projected">
+									<p>Projected results</p>
+									<iframe src='https://flo.uri.sh/visualisation/11751523/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:550px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+								</div>
+								<br>
+								
+							</div>
+							
+						</div>
+						
+						<div class="container" style="justify-content:center;">
+							<iframe src='https://flo.uri.sh/visualisation/11753070/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:50%;height:350px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+							<!-- <iframe src='https://flo.uri.sh/visualisation/11753027/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:45%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div> -->
+						</div>
+					</div>
+					<!-- /MAIN -->
+				</div>
+			</div>
+			<div class="related" id="blog">
+				<div class="container">
+					<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
+						<div class="my_carousel">
+							<ul class="owl-carousel">
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Jacob Fulton <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/incumbent-gov-j-b-pritzker-projected-to-win-gubernatorial-race/">Incumbent Gov. J.B. Pritzker projected to win gubernatorial race</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Jorja Siemons <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/top-stories/rep-robyn-gabel-projected-to-win-reelection-to-statehouse-representing-district-18/">Rep. Robyn Gabel projected to win reelection to statehouse representing District 18</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Aviva Bechky <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/democrat-kwame-raoul-re-elected-as-illinois-attorney-general/">Democrat Kwame Raoul re-elected as Illinois Attorney General</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Pavan Acharya and William Tong <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/former-state-treasurer-alexi-giannoulias-wins-illinois-secretary-of-state-election/">Former State Treasurer Alexi Giannoulias wins Illinois Secretary of State Election</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Joanna Hou <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/lateststories/michael-frerichs-projected-to-win-third-term-as-illinois-treasurer-2/">Michael Frerichs projected to win third term as Illinois treasurer</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Kate Walter <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/lateststories/sen-laura-fine-projected-to-win-re-election-for-state-senator-in-illinois-9th-district/">Sen. Laura Fine projected to win re-election for State Senator in Illinois’ 9th District</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Yiming Fu <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/jennifer-gong-gershowitz-projected-to-win-illinois-district-17-state-rep-race/">Jennifer Gong-Gershowitz projected to win Illinois District 17 state Rep. race</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Selena Kuznikov <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/lateststories/incumbent-susana-a-mendoza-projected-to-win-illinois-comptroller-race/">Incumbent Susana A. Mendoza projected to win Illinois comptroller race</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Avani Kalra <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/09/lateststories/lllinois-voters-appoint-three-supreme-court-justices-democrats-retain-majority/">lllinois voters appoint three supreme court justices, Democrats retain majority
+											</a></h3>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<a class="prev_button" href="#"><span></span></a>
+							<a class="next_button" href="#"><span></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /STATE -->
+			
+			<!-- FEDERAL -->
+			<div class="results" id="federal">
+				<div class="container">
+					<!-- HEADER -->
+					<div class="title">
+						<h3>Federal elections</h3>
+						<p>Evanston will vote on several key races in congress, including one U.S. Senator and the 9th District U.S. Representative.</p>
+						
+					</div>
+					<!-- /HEADER -->
+					
+					<!-- MAIN -->
+					<div class="service_list">
+						<div class="votes child">
+							<p>Live results</p>
+							<iframe src='https://flo.uri.sh/visualisation/11751072/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+							
+						</div>
+						<div class="buttons">
+							<button type="button" id="usSenate">U.S. SENATE</button>
+							<button type="button" id="usHouse">U.S. HOUSE</button>
+						</div>
+						<br>
+						<div class="container">
+							
+							<div id="federal-map" class="child map">
+								<iframe src='https://flo.uri.sh/visualisation/11750744/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+							</div>
+							<div class="child info">
+								<div class="projected">
+									<p>Projected results</p>
+									<iframe src='https://flo.uri.sh/visualisation/11751587/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:550px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+								</div>
+								<br>
+								
+							</div>
+						</div>
+						
+					</div>
+					<!-- /MAIN -->
+				</div>
+			</div>
+			<div class="related" id="blog">
+				<div class="container">
+					<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
+						<div class="my_carousel">
+							<ul class="owl-carousel">
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Lily Carey <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/democratic-incumbent-tammy-duckworth-projected-to-win-u-s-senate-seat/" target="_blank">Democratic Incumbent Tammy Duckworth projected to win U.S. Senate seat</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Shannon Tyler <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/top-stories/breaking-democratic-incumbent-schakowsky-wins-illinois-9th-congressional-district/" target="_blank">Democratic Incumbent Schakowsky wins Illinois 9th Congressional district</a></h3>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<a class="prev_button" href="#"><span></span></a>
+							<a class="next_button" href="#"><span></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /FEDERAL -->
+			
+			<!-- RELATED COVERAGE -->
+			<div class="related" id="related">
+				<div class="container">
+					<div class="title">
+						<h3>Related Coverage:</h3>
+					</div>
+					<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
+						<div class="my_carousel">
+							<ul class="owl-carousel">
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/vote.jpeg" alt="" />
+											<div class="main" data-img-url="img/vote.jpeg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Pavan Acharya <a href="#">Campus</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/04/campus/the-daily-explains-a-guide-to-voting-from-northwesterns-evanston-campus/">The Daily Explains: A guide to voting from Northwestern’s Evanston campus</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/vote.jpeg" alt="" />
+											<div class="main" data-img-url="img/vote.jpeg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Isabel Funk and Jorja Siemons <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/10/26/top-stories/how-to-cast-a-ballot-in-evanstons-nov-8-midterm-elections/">How to cast a ballot in Evanston’s Nov. 8 midterm elections</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/gabel.jpg" alt="" />
+											<div class="main" data-img-url="img/gabel.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Shannon Tyler <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/10/20/city/18th-state-house-district-candidates-gabel-and-hutchinson-talk-key-illinois-issues-ahead-of-the-election/">18th State House District candidates Gabel and Hutchinson talk key Illinois issues ahead of the election</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/voted.png" alt="" />
+											<div class="main" data-img-url="img/voted.png"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Seren Park <a href="#">Campus</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/10/17/campus/northwestern-students-get-involved-in-upcoming-midterm-elections/">Northwestern students get involved in upcoming midterm elections
+											</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/crown.jpeg" alt="" />
+											<div class="main" data-img-url="img/crown.jpeg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Isabelle Butera <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/10/10/city/turnout-unclear-at-evanstons-upcoming-midterm-elections/">Turnout unclear at Evanston’s upcoming midterm elections
+											</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/primaries.jpg" alt="" />
+											<div class="main" data-img-url="img/primaries.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Jorja Siemons <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/10/25/city/the-daily-explains-ranked-choice-voting-is-up-for-debate-this-november-heres-how-it-could-impact-evanston/">The Daily Explains: Ranked-choice voting is up for debate this November. Here’s how it could impact Evanston
+											</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/primaries.jpg" alt="" />
+											<div class="main" data-img-url="img/primaries.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Kate Walter <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/10/11/city/darren-baileys-gubernatorial-party-nomination-signals-a-rightward-shift-in-illinois-gop-experts-say/">Darren Bailey’s gubernatorial party nomination signals a rightward shift in Illinois GOP, experts say
+											</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/primaries.jpg" alt="" />
+											<div class="main" data-img-url="img/primaries.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Jessica Ma <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/10/05/city/the-daily-explains-how-workers-rights-are-on-the-ballot-in-november-with-illinoiss-amendment-1/">The Daily Explains: How workers’ rights are on the ballot in November with Illinois’s Amendment 1
+											</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/voted.png" alt="" />
+											<div class="main" data-img-url="img/voted.png"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Shannon Tyler <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/10/04/city/the-daily-northwesterns-guide-to-illinoiss-2022-attorney-general-race/">The Daily Northwestern’s guide to Illinois’s 2022 Attorney General race
+											</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/city.jpg" alt="" />
+											<div class="main" data-img-url="img/city.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Saul Pink <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/07/12/city/city-council-approves-referendum-on-ranked-choice-voting-for-november-ballot/">City Council approves referendum on ranked-choice voting for November ballot
+											</a></h3>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<a class="prev_button" href="#"><span></span></a>
+							<a class="next_button" href="#"><span></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /RELATED COVERAGE -->
+			
+			<!-- FOOTER -->
+			<div class="footer" id="contact">
+				<div class="container">
+					<div class="title">
+						<h3>The Daily Northwestern</h3>
+					</div>
+					
+					<div class="extra_info">
+						<div class="social-links">
+							<a href="http://twitter.com/thedailynu" target="_blank"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.facebook.com/thedailynorthwestern" target="_blank"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://www.instagram.com/thedailynu/" target="_blank"><i class="fab fa-instagram"></i></a>
+						</div>
+						<ul class="wrapper">
+							<li class="wow fadeInLeft" data-wow-duration="1s">
+								<div class="list_inner">
+									<h3>Midterm Elections 2022</h3>
+									<p>Published on November 8, 2022. <br>&copy; <a href="https://dailynorthwestern.com/" target="_blank">The Daily Northwestern</a>. Template by marketify.</p>
+								</div>
+							</li>
+							<li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+								<div class="list_inner">
+									<h3>Editorial Team</h3>
+									<ul class="in">
+										<li><strong>Editor-in-chief</strong>: Jacob Fulton</li>
+										<li><strong>City Editor</strong>: Avani Kalra</li>
+										<li><strong>Digital Managing Editor</strong>: Angeli Mittal</li>
+										<li>Site created by Angeli Mittal and Zoey Soh</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /FOOTER -->
 			
 		</div>
-		<!-- / WRAPPER ALL -->
+		<!-- /MAINPART -->
 		
-		<!-- SCRIPTS -->
-		<script src="js/jquery.js"></script>
-		<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
-		<script src="js/plugins.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&callback=initMap"></script>
-		<script src="js/init.js"></script>
-		<script src="js/buttons.js"></script>
-		<script src="https://widget.taggbox.com/embed-lite.min.js" type="text/javascript"></script>
-		<!-- /SCRIPTS -->
-		
-	</body>
-	</html>
+	</div>
+	<!-- / WRAPPER ALL -->
+	
+	<!-- SCRIPTS -->
+	<script src="js/jquery.js"></script>
+	<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
+	<script src="js/plugins.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&callback=initMap"></script>
+	<script src="js/init.js"></script>
+	<script src="js/buttons.js"></script>
+	<script src="https://widget.taggbox.com/embed-lite.min.js" type="text/javascript"></script>
+	<!-- /SCRIPTS -->
+	
+</body>
+</html>
