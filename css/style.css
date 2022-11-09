@@ -340,6 +340,7 @@ a:hover {
 
 .svg {
 	height: 50px;
+	width: 50px;
 	color: black;
 }
 
@@ -510,6 +511,7 @@ button:hover {
 
 .results .service_list .container .child {
 	margin-right: 15px;
+	width: 100%;
 }
 
 .results .service_list .container .info {

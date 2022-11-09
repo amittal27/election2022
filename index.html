@@ -361,6 +361,7 @@
 		
 		.svg {
 			height: 50px;
+			width: 50px;
 			color: black;
 		}
 		
@@ -531,6 +532,7 @@
 		
 		.results .service_list .container .child {
 			margin-right: 15px;
+			width: 50%;
 		}
 		
 		.results .service_list .container .info {
@@ -1201,15 +1203,20 @@
 				<div class="menu">
 					<!-- MAPS -->
 					<div class="menu-item maps">
-						<a class="icon" href="#evanston"><img class="svg custom" src="img/map/evanston.svg" alt="" style="width:50px;"/></a>
-						<a class="icon" href="#township"><img class="svg custom" src="img/map/cook_county.svg" alt="" style="width:50px;"/></a>
-						<a class="icon" href="#state"><img class="svg custom" src="img/map/illinois.svg" alt="" style="width:50px;"/></a>
-						<a class="icon" href="#federal"><img class="svg custom" src="img/map/usa.svg" alt="" style="width:50px;"/></a>
+						<a class="icon" href="#evanston"><img class="svg custom" src="img/map/evanston.svg" alt="" width="50px"/></a>
+						<a class="icon" href="#township"><img class="svg custom" src="img/map/cook_county.svg" alt="" width="50px"/></a>
+						<a class="icon" href="#state"><img class="svg custom" src="img/map/illinois.svg" alt="" width="50px"/></a>
+						<a class="icon" href="#federal"><img class="svg custom" src="img/map/usa.svg" alt="" width="50px"/></a>
 					</div>
 					<!-- RELATED COVERAGE -->
 					<div class="menu-item">
 						<a href="#related">Related coverage</a>
 					</div>
+
+					<p style="font-size: 14px;">
+						<i>Last updated 2:49 a.m. November 9, 2022</i>
+					</p>
+					<br>
 					<!-- TWITTER FEED -->
 					<iframe src="https://widget.taggbox.com/113410" style="width:100%;height:600px;border:none;"></iframe>					<!-- <div class="taggbox" style="width:100%;height:100%;" data-widget-id="113397" data-tags="false"></div><script src="https://widget.taggbox.com/embed-lite.min.js" type="text/javascript"></script> -->
 				</div>
@@ -1231,22 +1238,23 @@
 					
 					<!-- MAIN -->
 					<div class="service_list">
-						<div class="votes child">
-							<p>Live results</p>
-							<iframe src='https://flo.uri.sh/visualisation/11751505/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>								
-						</div>
+						
 						<div class="container">
 							<!-- MAP -->
 							<!-- <div class="child map evanston-map">
 								<iframe src='https://flo.uri.sh/visualisation/11750681/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
 							</div> -->
-							
+							<div class="votes child" width="50%">
+								<p>Live results</p>
+								<iframe src='https://flo.uri.sh/visualisation/11751505/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>								
+							</div>
 							<!-- OTHER STATS -->
-							<div class="child info">
-								<!-- <div class="projected">
+							<div class="child info" width="50%">
+								
+								<div class="projected">
 									<p>Projected results</p>
 									<iframe src='https://flo.uri.sh/visualisation/11751301/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-								</div> -->
+								</div>
 								<br>
 								
 							</div>
@@ -1261,6 +1269,20 @@
 					<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
 						<div class="my_carousel">
 							<ul class="owl-carousel">
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/indivisible2.jpg" alt="" />
+											<div class="main" data-img-url="img/indivisible2.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Shannon Tyler <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/09/city/evanston-voters-show-up-to-the-polls-for-reproductive-rights-ranked-choice-voting/">Evanston voters show up to the polls for reproductive rights, ranked-choice voting
+											</a></h3>
+										</div>
+									</div>
+								</li>
 								<li>
 									<div class="list_inner">
 										<div class="image">
@@ -1315,18 +1337,19 @@
 					
 					<!-- MAIN -->
 					<div class="service_list">
-						<div class="votes child">
-							<p>Live results</p>
-							<iframe src='https://flo.uri.sh/visualisation/11751102/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-							
-						</div>
+						
 						
 						<div class="container">
-							<!-- <div class="child info projected" style="flex-grow: 1">
+							<div class="votes child" width="50%">
+								<p>Live results</p>
+								<iframe src='https://flo.uri.sh/visualisation/11751102/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+								
+							</div>
+							<div class="child info projected" width="50%">
 								<p>Projected results</p>
-								<iframe src='https://flo.uri.sh/visualisation/11751439/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-							</div> -->
-							<!-- <br> -->
+								<iframe src='https://flo.uri.sh/visualisation/11751439/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+							</div>
+							<br>
 							
 						</div>
 					</div>
@@ -1407,21 +1430,22 @@
 							<div id="state-map" class="child map">
 								<iframe src='https://flo.uri.sh/visualisation/11750879/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
 							</div>
-							<div class="child info">
-								<div class="projected">
-									<p>Projected results</p>
-									<iframe src='https://flo.uri.sh/visualisation/11751523/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:550px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-								</div>
-								<br>
-								
+							<div class="container" style="justify-content:center;">
+								<iframe src='https://flo.uri.sh/visualisation/11753070/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:350px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+								<!-- <iframe src='https://flo.uri.sh/visualisation/11753027/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:45%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div> -->
 							</div>
+							
+							
+						</div>
+						<div class="child info">
+							<div class="projected">
+								<p>Projected results</p>
+								<iframe src='https://flo.uri.sh/visualisation/11751523/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:550px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
+							</div>
+							<br>
 							
 						</div>
 						
-						<div class="container" style="justify-content:center;">
-							<iframe src='https://flo.uri.sh/visualisation/11753070/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:50%;height:350px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div>
-							<!-- <iframe src='https://flo.uri.sh/visualisation/11753027/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:45%;height:300px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'></div> -->
-						</div>
 					</div>
 					<!-- /MAIN -->
 				</div>
@@ -1431,6 +1455,19 @@
 					<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
 						<div class="my_carousel">
 							<ul class="owl-carousel">
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Davis Giangiulio <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/09/lateststories/illinois-voters-approve-workers-rights-amendment-in-win-for-unions/">Illinois voters approve ‘Workers Rights Amendment’ in win for unions</a></h3>
+										</div>
+									</div>
+								</li>
 								<li>
 									<div class="list_inner">
 										<div class="image">
@@ -1613,6 +1650,19 @@
 											<a class="full_link" href="#"></a>
 										</div>
 										<div class="news_details">
+											<span>Avani Kalra <a href="#">City</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/09/lateststories/lllinois-voters-appoint-three-supreme-court-justices-democrats-retain-majority/" target="_blank">lllinois voters appoint three supreme court justices, Democrats retain majority</a></h3>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/election.jpg" alt="" />
+											<div class="main" data-img-url="img/election.jpg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
 											<span>Lily Carey <a href="#">City</a></span>
 											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/08/city/democratic-incumbent-tammy-duckworth-projected-to-win-u-s-senate-seat/" target="_blank">Democratic Incumbent Tammy Duckworth projected to win U.S. Senate seat</a></h3>
 										</div>
@@ -1649,6 +1699,19 @@
 					<div class="news_inner wow fadeInLeft" data-wow-duration="1s">
 						<div class="my_carousel">
 							<ul class="owl-carousel">
+								<li>
+									<div class="list_inner">
+										<div class="image">
+											<img src="img/students.jpeg" alt="" />
+											<div class="main" data-img-url="img/students.jpeg"></div>
+											<a class="full_link" href="#"></a>
+										</div>
+										<div class="news_details">
+											<span>Joanna Hou <a href="#">Campus</a></span>
+											<h3 class="title"><a href="https://dailynorthwestern.com/2022/11/09/campus/i-hope-american-voices-get-heard-students-react-to-2022-midterm-election-results/">“I hope American voices get heard”: Students react to 2022 midterm election results</a></h3>
+										</div>
+									</div>
+								</li>
 								<li>
 									<div class="list_inner">
 										<div class="image">
